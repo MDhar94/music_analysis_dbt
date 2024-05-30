@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "The raw data from the music dataset: Spotify, 1921-2020"
+    tables:
+      - name: artists
+        description: "The musicians / bands in the dataset"
+        columns:
+          - name: id
+            description: "The unique identifier for the artist"
+            tests:
+              - unique
+      - name: tracks
+        description: "The songs in the dataset"
+        columns:
+          - name: id
+            description: "The unique identifier for the track"
+            tests:
+              - unique
